@@ -33,7 +33,7 @@ its-v1/
 ├── import_csv.py # Script to load quizzes from CSV
 ├── req.txt # Python dependencies
 └── README.md # You are here!
----
+```
 
 ## ⚙️ Setup Instructions
 
@@ -88,7 +88,7 @@ its-v1/
 Machine Learning Integration
 Located at: static/scripts/linear_regression_model.pkl
 The model evaluates quiz performance and classifies the student into levels (e.g., beginner, intermediate, advanced).
-This classification is used to:
+This classification is used to: 
 1. Adjust the difficulty of future quizzes.
 
 2. Recommend relevant study materials.
