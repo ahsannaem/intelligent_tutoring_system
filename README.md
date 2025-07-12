@@ -48,7 +48,7 @@ its-v1/
 ### 🔧 Local Development Setup
 
 1. **Clone the Repository**
-   ```bash
+   ```
    git clone https://github.com/ahsannaem/intelligent_tutoring_system.git
    cd its-v1
 
