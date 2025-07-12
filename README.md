@@ -53,7 +53,7 @@ its-v1/
    cd its-v1
 
 ### Create and Activate a Virtual Environment
-    ```bash
+    ```
     python -m venv venv
     # Windows
     venv\Scripts\activate
@@ -62,25 +62,25 @@ its-v1/
     ```
 
 ### Install Dependencies
-    ```bash
+    ```
     pip install --upgrade pip
     pip install -r req.txt
     ```
 
 
 ### Apply Migrations
-    ```bash
+    ```
     python manage.py makemigrations
     python manage.py migrate
     ```
 
 ### Create a Superuser (optional)
-    ```bash
+    ```
     python manage.py createsuperuser
     ```
 
 ### Run Server
-    ```bash
+    ```
     py manage.py runserver
     ```
 ### Open your browser and visit: http://localhost:8000
