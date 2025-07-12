@@ -1,10 +1,10 @@
-# 🧠 Intelligent Tutoring System (ITS)
+#  Intelligent Tutoring System (ITS)
 
 The **Intelligent Tutoring System (ITS)** is a personalized, AI-powered web application that adapts learning content based on student performance. Built using Django and integrated with a machine learning model, it provides a dynamic educational experience where students are assessed through quizzes, classified based on proficiency, and recommended appropriate study material to improve effectively.
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - 🔐 **Student Login System** – Secure authentication using Django's built-in auth system.
 - 📝 **Quiz Engine** – Structured quizzes to assess student understanding.
@@ -15,9 +15,10 @@ The **Intelligent Tutoring System (ITS)** is a personalized, AI-powered web appl
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 its-v1/
+```bash
 │
 ├── accounts/ # Handles user profiles, registration, login, etc.
 ├── quiz/ # Quiz logic, models, forms, views, grading
@@ -32,13 +33,11 @@ its-v1/
 ├── import_csv.py # Script to load quizzes from CSV
 ├── req.txt # Python dependencies
 └── README.md # You are here!
-
-
 ---
 
 ## ⚙️ Setup Instructions
 
-### 📌 Prerequisites
+###  Prerequisites
 
 - Python 3.10 or higher
 - `virtualenv` installed (`pip install virtualenv`)
@@ -50,33 +49,40 @@ its-v1/
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/its-v1.git
+   git clone https://github.com/ahsannaem/intelligent_tutoring_system.git
    cd its-v1
 
 ### Create and Activate a Virtual Environment
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
-
+    ```bash
+    python -m venv venv
+    # Windows
+    venv\Scripts\activate
+    # macOS/Linux
+    source venv/bin/activate
+    ```
 
 ### Install Dependencies
-pip install --upgrade pip
-pip install -r req.txt
+    ```bash
+    pip install --upgrade pip
+    pip install -r req.txt
+    ```
 
 
 ### Apply Migrations
-python manage.py makemigrations
-python manage.py migrate
+    ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
 
 ### Create a Superuser (optional)
-python manage.py createsuperuser
-
+    ```bash
+    python manage.py createsuperuser
+    ```
 
 ### Run Server
-py manage.py runserver
-
+    ```bash
+    py manage.py runserver
+    ```
 ### Open your browser and visit: http://localhost:8000
 
 Machine Learning Integration
@@ -113,11 +119,12 @@ ML Integration: scikit-learn (trained model stored in .pkl)
 Others: Pandas, NumPy.
 
 
+## Future Improvements
+-Gamification (leaderboards, streaks, levels)
+-Visual analytics dashboard
+-Interactive video content with embedded questions
+-Admin analytics for class-level insights
+
+
 Author
 Ahsan
-
-## Future Improvements
-Gamification (leaderboards, streaks, levels)
-Visual analytics dashboard
-Interactive video content with embedded questions
-Admin analytics for class-level insights
