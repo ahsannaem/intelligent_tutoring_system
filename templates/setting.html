@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITS - Settings</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="setting.css">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><i class="fas fa-brain"></i> ITS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="studymaterial.html" class="nav-link">Course</a></li>
+                <li class="nav-item"><a href="{% url "dashboard" %}" class="nav-link">Dashboard</a></li>
+                <li class="nav-item"><a href="registration.html" class="nav-link">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="sidebar">
+        <h3>Dashboard</h3>
+        <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Home</a>
+        <a href="quizpage.html"><i class="fas fa-question-circle"></i> Quizzes</a>
+        <a href="studymaterial.html"><i class="fas fa-book"></i> Study Materials</a>
+        <a href="progress.html"><i class="fas fa-chart-line"></i> Progress</a>
+        <a href="setting.html"><i class="fas fa-cog"></i> Settings</a>
+    </div>
+
+    <div class="main-content">
+        <h2>Settings</h2>
+        
+        <!-- Profile Information -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Profile Information</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter new password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm new password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Preferences -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Preferences</h4>
+                <form>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="notifications">
+                        <label class="form-check-label" for="notifications">
+                            Enable Notifications
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dark-mode">
+                        <label class="form-check-label" for="dark-mode">
+                            Dark Mode
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Save Preferences</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Security Settings -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Security Settings</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" class="form-control" id="current-password" placeholder="Enter your current password">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" class="form-control" id="new-password" placeholder="Enter new password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-new-password">Confirm New Password</label>
+                        <input type="password" class="form-control" id="confirm-new-password" placeholder="Confirm new password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and JavaScript links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="setting.js"></script>
+</body>
+</html>

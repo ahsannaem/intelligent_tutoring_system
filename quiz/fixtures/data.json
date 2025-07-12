@@ -1,0 +1,590 @@
+[
+  {
+    "model": "quiz.Question",
+    "pk": 1,
+    "fields": {
+      "text": "Which of the following is not a constructor in C++?",
+      "option_A": "Default Constructor",
+      "option_B": "Parameterized Constructor",
+      "option_C": "Copy Constructor",
+      "option_D": "Destructor",
+      "correct": "Destructor"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 2,
+    "fields": {
+      "text": "What is the size of a pointer in a 32-bit system?",
+      "option_A": "2 bytes",
+      "option_B": "4 bytes",
+      "option_C": "8 bytes",
+      "option_D": "16 bytes",
+      "correct": "4 bytes"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 3,
+    "fields": {
+      "text": "Which of the following is used to access members of a class?",
+      "option_A": ". (dot operator)",
+      "option_B": "-> (arrow operator)",
+      "option_C": "Both A and B",
+      "option_D": "* (asterisk operator)",
+      "correct": "Both A and B"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 4,
+    "fields": {
+      "text": "Which of the following is the correct syntax to declare a function in C++?",
+      "option_A": "function int func();",
+      "option_B": "int func();",
+      "option_C": "func(int);",
+      "option_D": "int func(void);",
+      "correct": "int func();"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 5,
+    "fields": {
+      "text": "for (int i = 0; i < 5; i++) { if (i == 3) break; } cout << i; OUTPUT?",
+      "option_A": "2",
+      "option_B": "3",
+      "option_C": "4",
+      "option_D": "Compiler error",
+      "correct": "3"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 6,
+    "fields": {
+      "text": "int x = 5; int y = 2; cout << x / y;",
+      "option_A": "2",
+      "option_B": "2.5",
+      "option_C": "2",
+      "option_D": "0",
+      "correct": "2"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 7,
+    "fields": {
+      "text": "What does the 'sizeof' operator do in c++?",
+      "option_A": "Returns the size of a variable in bits",
+      "option_B": "Returns the size of a variable in byte",
+      "option_C": "Returns the size of a variable in array",
+      "option_D": "Returns the size of a class",
+      "correct": "Returns the size of a variable in byte"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 8,
+    "fields": {
+      "text": "Which of the following is used to terminate a statement in C++?",
+      "option_A": ".",
+      "option_B": ";",
+      "option_C": ":",
+      "option_D": ",",
+      "correct": ";"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 9,
+    "fields": {
+      "text": "What does std::vector represent in C++?",
+      "option_A": "Fixed-size array",
+      "option_B": "Dynamic array",
+      "option_C": "Linked list",
+      "option_D": "Binary tree",
+      "correct": "Dynamic array"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 10,
+    "fields": {
+      "text": "int main() { int a = 10; std::cout << ++a; } OUTPUT?",
+      "option_A": "10",
+      "option_B": "11",
+      "option_C": "9",
+      "option_D": "0",
+      "correct": "11"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 11,
+    "fields": {
+      "text": "Which keyword is used to inherit a class in C++?",
+      "option_A": "extends",
+      "option_B": "inherit",
+      "option_C": "public",
+      "option_D": "implements",
+      "correct": "public"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 12,
+    "fields": {
+      "text": "What is the main difference between 'struct' and 'class' in C++?",
+      "option_A": "No difference",
+      "option_B": "struct' is public by default, 'class' is private by default",
+      "option_C": "class' cannot contain member functions",
+      "option_D": "struct' cannot have constructors",
+      "correct": "struct' is public by default, 'class' is private by default"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 13,
+    "fields": {
+      "text": "Which of the following is a correct statement about namespaces in C++?",
+      "option_A": "They prevent name conflicts",
+      "option_B": "They are used to organize code",
+      "option_C": ") Multiple namespaces can be used in a single file",
+      "option_D": "All of the above",
+      "correct": "All of the above"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 14,
+    "fields": {
+      "text": "Which of the following is true about destructors in C++?",
+      "option_A": "Destructors cannot be overloaded",
+      "option_B": "Destructors are called when an object is destroyed",
+      "option_C": "Destructors have the same name as the class with a ~ symbol",
+      "option_D": "All of the above",
+      "correct": "All of the above"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 15,
+    "fields": {
+      "text": "Which of the following is not a type of constructor in C++?",
+      "option_A": "Default constructor",
+      "option_B": "Copy constructor",
+      "option_C": "Move constructor",
+      "option_D": "Virtual constructor",
+      "correct": "Virtual constructor"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 16,
+    "fields": {
+      "text": "Which of the following is the correct syntax for declaring a function pointer in C++?",
+      "option_A": "int (*ptr)();",
+      "option_B": "int ptr();",
+      "option_C": "int *ptr;",
+      "option_D": "int **ptr();",
+      "correct": "int (*ptr)();"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 17,
+    "fields": {
+      "text": "What is a pure virtual function in C++?",
+      "option_A": "A function with no implementation",
+      "option_B": "A function defined in a class but not implemented",
+      "option_C": "A function that must be overridden in derived class",
+      "option_D": "All of the above",
+      "correct": "All of the above"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 18,
+    "fields": {
+      "text": "How are objects created in C++?",
+      "option_A": "Using a constructor",
+      "option_B": "Using a function",
+      "option_C": "Using a class",
+      "option_D": "Using a structure",
+      "correct": "Using a class"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 19,
+    "fields": {
+      "text": "Which header file is required for using input/output streams in C++?",
+      "option_A": "stdio.h",
+      "option_B": "stdlib.h",
+      "option_C": "iostream",
+      "option_D": "fstream",
+      "correct": "iostream"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 20,
+    "fields": {
+      "text": "What is the default return type of main() function in C++?",
+      "option_A": ") int",
+      "option_B": "Void",
+      "option_C": "char",
+      "option_D": "float",
+      "correct": ") int"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 21,
+    "fields": {
+      "text": "Which data type is used to store true/false values in C++?",
+      "option_A": "Int",
+      "option_B": "bool",
+      "option_C": "char",
+      "option_D": "float",
+      "correct": "bool"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 22,
+    "fields": {
+      "text": "Which of the following can be overloaded in C++?",
+      "option_A": "Functions",
+      "option_B": "Operators",
+      "option_C": "Constructors",
+      "option_D": "All of the above",
+      "correct": "All of the above"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 23,
+    "fields": {
+      "text": "What is the function of the 'new' operator in C++?",
+      "option_A": "Deallocates memory",
+      "option_B": "Allocates memory",
+      "option_C": "Initializes variables",
+      "option_D": "Deletes objects",
+      "correct": "Allocates memory"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 24,
+    "fields": {
+      "text": "What does STL stand for in C++?",
+      "option_A": "Standard Template Library",
+      "option_B": "Sequential Template Library",
+      "option_C": "Standard Type Library",
+      "option_D": "System Template Library",
+      "correct": "Standard Template Library"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 25,
+    "fields": {
+      "text": "Which of the following is a feature of polymorphism in C++?",
+      "option_A": "Function overloading",
+      "option_B": "Operator overloading",
+      "option_C": "Virtual functions",
+      "option_D": "ALL",
+      "correct": "ALL"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 26,
+    "fields": {
+      "text": "int main() { int a = 10; int &ref = a; ref++; std::cout << a; }",
+      "option_A": "10",
+      "option_B": "11",
+      "option_C": "Garbage value",
+      "option_D": "NONE",
+      "correct": "11"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 27,
+    "fields": {
+      "text": "Which C++ keyword is used to handle exceptions?",
+      "option_A": "throw",
+      "option_B": "Try",
+      "option_C": "Catch",
+      "option_D": "All of the above",
+      "correct": "All of the above"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 28,
+    "fields": {
+      "text": "int *ptr;What does the following code snippet declare?",
+      "option_A": "Pointer to integer",
+      "option_B": "Reference to integer",
+      "option_C": "Pointer to character",
+      "option_D": ") Integer variable**",
+      "correct": "Pointer to integer"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 29,
+    "fields": {
+      "text": "class B {}; class D : public B {};",
+      "option_A": "Single Inheritance",
+      "option_B": "Multiple Inheritance",
+      "option_C": "Multilevel Inheritance",
+      "option_D": "Hybrid Inheritance**",
+      "correct": "Single Inheritance"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 30,
+    "fields": {
+      "text": "What is the default access specifier for class members in C++?",
+      "option_A": "Public",
+      "option_B": "Private",
+      "option_C": "Protected",
+      "option_D": "none",
+      "correct": "Private"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 31,
+    "fields": {
+      "text": "Which of the following is a feature of object-oriented programming in C++?",
+      "option_A": "Procedural Programming",
+      "option_B": "Polymorphism",
+      "option_C": "Low-level operations",
+      "option_D": "Fast execution",
+      "correct": "Polymorphism"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 32,
+    "fields": {
+      "text": "Which of the following is a correct class definition in C++?",
+      "option_A": "class ClassName {};",
+      "option_B": "class ClassName [] {};",
+      "option_C": "class {} ClassName;",
+      "option_D": "class() ClassName {};",
+      "correct": "class ClassName {};"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 33,
+    "fields": {
+      "text": "int main() { int x = 10 / 0; } OUTPUT?",
+      "option_A": "Compile-time error",
+      "option_B": "Run-time error",
+      "option_C": "Infinite loop",
+      "option_D": "None of the above**",
+      "correct": "Run-time error"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 34,
+    "fields": {
+      "text": "Which of the following is not a valid C++ variable name?",
+      "option_A": "intNumber",
+      "option_B": "float-value",
+      "option_C": "totalValue",
+      "option_D": "num123",
+      "correct": "float-value"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 35,
+    "fields": {
+      "text": "Which of the following is used to dynamically allocate memory in C++?",
+      "option_A": "malloc()",
+      "option_B": "calloc()",
+      "option_C": "new",
+      "option_D": "free()",
+      "correct": "new"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 36,
+    "fields": {
+      "text": "int a = 10, b = 20; std::cout << a++ + ++b; OUTPUT?",
+      "option_A": "31",
+      "option_B": "32",
+      "option_C": "33",
+      "option_D": "34",
+      "correct": "31"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 37,
+    "fields": {
+      "text": "Which of the following correctly declares a reference variable in C++?",
+      "option_A": "int &ref = var;",
+      "option_B": "int ref = &var;",
+      "option_C": "int ref = *var;",
+      "option_D": "int *ref = &var;",
+      "correct": "int &ref = var;"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 38,
+    "fields": {
+      "text": "Which keyword is used to define a constant value in C++?",
+      "option_A": "constant",
+      "option_B": "final",
+      "option_C": "const",
+      "option_D": "static",
+      "correct": "const"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 39,
+    "fields": {
+      "text": "Which of the following is true about friend functions in C++?",
+      "option_A": "They can access private and protected members of a class.",
+      "option_B": "They can only access public members of a class",
+      "option_C": "They must be declared inside the public section.",
+      "option_D": "They must return a value.",
+      "correct": "They can access private and protected members of a class."
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 40,
+    "fields": {
+      "text": "int main() { char arr[] = \"Hello\"; std::cout << sizeof(arr); }",
+      "option_A": "6",
+      "option_B": "5",
+      "option_C": "2",
+      "option_D": "ERROR",
+      "correct": "6"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 41,
+    "fields": {
+      "text": "Which of the following statements is correct about virtual functions in C++?",
+      "option_A": "Virtual functions must be defined in the base class.",
+      "option_B": "Virtual functions cannot be inherited.",
+      "option_C": "Virtual functions are declared using the virtual keyword",
+      "option_D": "Virtual functions cannot be overridden.",
+      "correct": "Virtual functions are declared using the virtual keyword"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 42,
+    "fields": {
+      "text": "What is the main advantage of using templates in C++?",
+      "option_A": "Faster compilation",
+      "option_B": "Code reusability",
+      "option_C": "Secure code",
+      "option_D": "Easier debugging",
+      "correct": "Code reusability"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 43,
+    "fields": {
+      "text": "What is the role of destructors in C++?",
+      "option_A": "Initialize object members",
+      "option_B": "Allocate memory for objects",
+      "option_C": "Deallocate memory when the object is destroyed",
+      "option_D": "Both a and b",
+      "correct": "Deallocate memory when the object is destroyed"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 44,
+    "fields": {
+      "text": "Which of the following is not a valid file operation in C++?",
+      "option_A": "read()",
+      "option_B": "write()",
+      "option_C": "close()",
+      "option_D": "link()",
+      "correct": "link()"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 45,
+    "fields": {
+      "text": "Which of the following correctly opens a file in read mode in C++?",
+      "option_A": "fstream file(\"data.txt\", ios::in);",
+      "option_B": "fstream file(\"data.txt\", ios::out);",
+      "option_C": "ifstream file(\"data.txt\", ios::in);",
+      "option_D": "ifstream file(\"data.txt\", ios::out);",
+      "correct": "ifstream file(\"data.txt\", ios::in);"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 46,
+    "fields": {
+      "text": "Which of the following is true for an abstract class in C++?",
+      "option_A": "It can have both abstract and non-abstract methods.",
+      "option_B": "It cannot have member variables.",
+      "option_C": "It must have all virtual methods.",
+      "option_D": "It cannot be inherited.",
+      "correct": "It can have both abstract and non-abstract methods."
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 47,
+    "fields": {
+      "text": "Which of the following functions can be used to read a whole line from a file in C++?",
+      "option_A": "cin",
+      "option_B": "getline()",
+      "option_C": "scanf()",
+      "option_D": "read()",
+      "correct": "getline()"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 48,
+    "fields": {
+      "text": "int a = 5, b = 3; cout << a + b; OUTPUT?",
+      "option_A": "8",
+      "option_B": "5",
+      "option_C": "3",
+      "option_D": NaN,
+      "correct": "8"
+    }
+  },
+  {
+    "model": "quiz.Question",
+    "pk": 49,
+    "fields": {
+      "text": "int x = 3; int y = 2; cout << (x > y ? x : y); OUTPUT?",
+      "option_A": "3",
+      "option_B": "2",
+      "option_C": "1",
+      "option_D": "NONE",
+      "correct": "3"
+    }
+  }
+]

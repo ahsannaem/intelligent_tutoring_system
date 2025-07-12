@@ -1,0 +1,38 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #4b0082;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.container h2 {
+    color: #4b0082;
+}
+
+.material {
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #4b0082;
+    border-color: #4b0082;
+}
+
+.progress-bar {
+    background-color: #4b0082;
+}

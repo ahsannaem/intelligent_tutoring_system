@@ -1,0 +1,54 @@
+/* styles.css */
+.center {
+    display: flex;
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); /* Dark gradient background */
+}
+.glassy-card {
+    justify-content: center; /* Center horizontally */
+    height: auto;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3); /* White background with transparency */
+    border-radius: 15px; /* Rounded corners */
+    backdrop-filter: blur(100px); /* Background blur effect */
+    box-shadow: 0 4px 90px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding around the content */
+    max-width: 400px; /* Maximum width for the card */
+    margin: 50px auto; /* Centering the card */
+    text-align: center; /* Center text alignment */
+}
+
+/* Optional: Style buttons for consistency */
+.btn-primary {
+    background-color: rgba(0, 123, 255, 0.8); /* Slightly transparent blue */
+    border: none; /* No border */
+}
+
+.btn-primary:hover {
+    background-color: rgba(0, 123, 255, 1); /* Full color on hover */
+}
+/* styles.css */
+
+.custom-input {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the input */
+    margin-bottom: 15px; /* Space between fields */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+    transition: all 0.3s; /* Smooth transition for focus */
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder color */
+}
+
+.custom-input:focus {
+    border-color: rgba(0, 123, 255, 0.8); /* Change border color on focus */
+    background: rgba(255, 255, 255, 0.3); /* Slightly change background on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8); /* Add shadow effect on focus */
+}

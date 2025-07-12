@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITS - Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/dashboard.css' %}"> <!-- Linking the external CSS file -->
+    <style>
+        body {
+            padding: 0%;
+            margin: 0%;
+            background-color: #f8f9fa; /* Light background for better contrast */
+        }
+        .navbar {
+            background-color: #343a40; /* Darker navbar */
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important; /* White text for navbar items */
+        }
+        .nav-link:hover {
+            color: #adb5bd !important; /* Light grey on hover */
+        }
+        .container {
+            margin-top: 0px;
+        }
+        .video-container {
+            margin-bottom: 30px;
+        }
+        h4 {
+            margin-top: 15px; /* Space above video titles */
+        }
+        iframe {
+            width: 100%; /* Make videos responsive */
+            height: 315px; /* Fixed height for videos */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark container-fluid ">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <i class="fas fa-brain"></i> ITS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'quiz' %}">Quizzes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'study' %}">Study Materials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                </li>
+                <li class="nav-item">
+                    {% if user.is_authenticated %}
+                    <form method="POST" action="{% url 'logout' %}" class="form-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </form>
+                    {% else %}
+                    <a href="{% url 'login' %}" class="nav-link">Login</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content  m-0 ">
+        <h2 class="my-4">Study Material</h2>
+        <h1>Video Content</h1>
+        <div class="row video-container">
+            <div class="col-md-6 mb-4">
+                <h4>Learn JavaScript</h4>
+                <iframe src="https://www.youtube.com/embed/n8mNX2YqkUs?si=W2Y81C-89DKHRwXz" title="Learn JavaScript" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4>Learn Python</h4>
+                <iframe src="https://www.youtube.com/embed/rfscVS0vtbw?si=OZ0RITU8H7FBPnGm" title="Learn Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row video-container">
+            <div class="col-md-6 mb-4">
+                <h4>Learn Machine Learning</h4>
+                <iframe src="https://www.youtube.com/embed/i_LwzRVP7bg?si=iRimXnDKoRVHhDzQ" title="Learn Machine Learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4>Learn C++</h4>
+                <iframe src="https://www.youtube.com/embed/8jLOx1hD3_o?si=VqWgFJ1tRmiut898" title="Learn C++" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and JavaScript links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar {
+    background-color: #4b0082;
+}
+
+.navbar a {
+    color: white !important;
+}
+.navback {
+    background-image: url('../image/laptop.png'); /* Adjust the path as necessary */
+    background-size: cover; /* Adjust this for your needs */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero .hero-content {
+    z-index: 1;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in;
+}
+
+.cta-btn {
+    background-color: #4b0082;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.bck {
+    background-image: url('../image/book.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; /* Required for pseudo-element positioning */
+    z-index: 0;
+}
+
+/* Optional: If you want to overlay content on top */
+.bck::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* Ensure it stays above the blurred background */
+}
+
+.z-2{
+    z-index: 2;
+}
+
+.hero-content {
+
+
+    position: relative; /* Ensure content is above the blurred background */
+    z-index: 1; /* Position above the pseudo-element */
+    padding: 20px; /* Optional: Add some padding */
+}
+
+.cta-btn {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.cta-btn:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+.cta-btn:hover {
+    background-color: #3a0066;
+    transform: scale(1.05);
+}
+
+.features {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.features h2 {
+    color: #4b0082;
+    margin-bottom: 40px;
+}
+
+.features .icon {
+    font-size: 48px;
+    color: #4b0082;
+    transition: color 0.3s;
+}
+
+.features .icon:hover {
+    color: #3a0066;
+}
+
+.footer {
+    background-color: #4b0082;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.modal-header {
+    background-color: #4b0082;
+    color: white;
+    border-bottom: none;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #4b0082;
+    color: white;
+    border: none;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #3a0066;
+}
+
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: #4b0082;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+    color: #4b0082;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #4b0082;
+    border-color: #4b0082;
+}
+
+.toggle-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #4b0082;
+    cursor: pointer;
+}

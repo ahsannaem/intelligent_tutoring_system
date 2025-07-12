@@ -1,0 +1,225 @@
+html{
+    margin:0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+ 
+.navbar {
+    background-color: #4b0082;
+    position:fixed;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.sidebar {
+    background-color: #4b0082;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    width: 250px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 30px;
+}
+
+.progress-bar {
+    background-color: #4b0082;
+}
+
+.btn-primary {
+    background-color: #4b0082;
+    border-color: #4b0082;
+}
+\\
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+
+/* -- vars */
+:root {
+    --bg-color: #34495e;
+    --default-size: 1em;
+    --label-font-size: calc(var(--default-size) / 4);
+    --label-font-size-redo: calc(var(--default-size) * 4);
+}
+
+/* -- selectors */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #ecf0f1;
+    color: #444;
+    font-family: 'Lato', Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+    padding: 0px;
+}
+
+.set-size {
+    font-size: 10em;
+}
+
+.charts-container::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.pie-wrapper {
+    width: var(--default-size);
+    height: var(--default-size);
+    float: left;
+    margin: 15px;
+    position: relative;
+}
+
+.pie-wrapper:nth-child(3n + 1) {
+    clear: both;
+}
+
+.pie {
+    width: 100%;
+    height: 100%;
+    clip: rect(0, var(--default-size), var(--default-size), calc(var(--default-size) / 2));
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.half-circle {
+    width: 100%;
+    height: 100%;
+    border: calc(var(--default-size) / 10) solid #3498db; /* Default border color */
+    border-radius: 50%;
+    clip: rect(0, calc(var(--default-size) / 2), var(--default-size), 0);
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.label {
+    background: var(--bg-color);
+    border-radius: 50%;
+    bottom: calc(var(--label-font-size-redo) / 10);
+    color: #ecf0f1;
+    cursor: default;
+    display: block;
+    font-size: var(--label-font-size);
+    left: calc(var(--label-font-size-redo) / 10);
+    line-height: calc(var(--label-font-size-redo) * 0.7);
+    position: absolute;
+    right: calc(var(--label-font-size-redo) / 10);
+    text-align: center;
+    top: calc(var(--label-font-size-redo) / 10);
+}
+
+.label .smaller {
+    color: #bdc3c7;
+    font-size: 0.45em;
+    padding-bottom: 20px;
+    vertical-align: super;
+}
+
+.shadow {
+    width: 100%;
+    height: 100%;
+    border: calc(var(--default-size) / 10) solid #bdc3c7;
+    border-radius: 50%;
+}
+
+.pie-wrapper.style-2 .label {
+    background: none;
+    color: #7f8c8d;
+}
+
+.pie-wrapper.style-2 .label .smaller {
+    color: #bdc3c7;
+}
+
+/* Progress styles */
+.pie-wrapper.progress-30 .half-circle {
+    border-color: #3498db;
+    transform: rotate(108deg); /* 30% */
+}
+
+.pie-wrapper.progress-60 .half-circle {
+    border-color: #9b59b6;
+    transform: rotate(216deg); /* 60% */
+}
+
+.pie-wrapper.progress-90 .half-circle {
+    border-color: #e67e22;
+    transform: rotate(324deg); /* 90% */
+}
+
+.pie-wrapper.progress-45 .half-circle {
+    border-color: #1abc9c;
+    transform: rotate(162deg); /* 45% */
+}
+
+.pie-wrapper.progress-75 .half-circle {
+    border-color: #8e44ad;
+    transform: rotate(270deg); /* 75% */
+}
+
+.pie-wrapper.progress-95 .half-circle {
+    border-color: #e74c3c;
+    transform: rotate(342deg); /* 95% */
+}
+
+.pie-wrapper--solid {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.pie-wrapper--solid::before {
+    border-radius: 0 100% 100% 0 / 50%;
+    content: '';
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+}
+
+.pie-wrapper--solid .label {
+    background: transparent;
+}
+
+.pie-wrapper--solid.progress-65 {
+    background: linear-gradient(to right, #e67e22 50%, var(--bg-color) 50%);
+}
+
+.pie-wrapper--solid.progress-25 {
+    background: linear-gradient(to right, #9b59b6 50%, var(--bg-color) 50%);
+}
+
+.pie-wrapper--solid.progress-88 {
+    background: linear-gradient(to right, #3498db 50%, var(--bg-color) 50%);
+}

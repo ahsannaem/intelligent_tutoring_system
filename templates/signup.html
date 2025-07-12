@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Tutoring System - Sign Up</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/index.css' %}">
+    <style>
+        .gradient-custom-2 {
+            background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+        }
+        .glassy-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="gradient-form" style="background-color: #eee;">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark gradient-custom-2">
+        <a class="navbar-brand" href="{% url 'index' %}"><i class="fas fa-brain"></i> ITS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Display Messages -->
+    <div class="container mt-3">
+        {% if messages %}
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Sign-Up Form -->
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-6 col-xl-5 glassy-card">
+                <h1 class="text-center mb-4">Sign Up</h1>
+                <form method="post" class="text-center needs-validation" novalidate id="signUpForm">
+                    {% csrf_token %}
+                    {{ form.as_p }} <!-- Render Django form fields here -->
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block gradient-custom-2">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Intelligent Tutoring System. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for Alerts -->
+    <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="alertModalLabel">Input Error</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Error message will be inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Form Validation Script -->
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        // Prevent default form submission
+                        event.preventDefault();
+
+                        const emailField = document.querySelector('input[name="email"]');
+                        const passwordField = document.querySelector('input[name="password"]');
+                        const confirmPasswordField = document.querySelector('input[name="confirm_password"]');
+                        let modalMessage = "";
+                        let isValid = true;
+
+                        // Validate email
+                        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                        if (!emailPattern.test(emailField.value)) {
+                            modalMessage += "Please enter a valid email address.<br>";
+                            isValid = false;
+                        }
+
+                        // Validate password
+                        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+                        if (!passwordPattern.test(passwordField.value)) {
+                            modalMessage += "Password must be at least 8 characters long, contain uppercase, lowercase, a number, and a special character.<br>";
+                            isValid = false;
+                        }
+
+                        // Validate confirm password
+                        if (confirmPasswordField.value !== passwordField.value) {
+                            modalMessage += "Passwords do not match.<br>";
+                            isValid = false;
+                        }
+
+                        // If not valid, show the modal with messages
+                        if (!isValid) {
+                            document.getElementById('modalBody').innerHTML = modalMessage;
+                            $('#alertModal').modal('show');
+                        } else {
+                            // If valid, submit the form
+                            form.submit();
+                        }
+
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+</html>

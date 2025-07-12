@@ -1,0 +1,50 @@
+,id,text,option_A,option_B,option_C,option_D,correct
+0,0,Which of the following is not a constructor in C++?,Default Constructor,Parameterized Constructor,Copy Constructor,Destructor,D
+1,1,What is the size of a pointer in a 32-bit system?,2 bytes,4 bytes,8 bytes,16 bytes,B
+2,2,Which of the following is used to access members of a class?,. (dot operator),-> (arrow operator),Both A and B,* (asterisk operator),C
+3,3,Which of the following is the correct syntax to declare a function in C++?,function int func();,int func();,func(int);,int func(void);,B
+4,4,for (int i = 0; i < 5; i++) { if (i == 3) break; } cout << i; OUTPUT?,2,3,4,Compiler error,B
+5,5,int x = 5; int y = 2; cout << x / y;,2,2.5,2,0,A
+6,6,What does the 'sizeof' operator do in c++?,Returns the size of a variable in bits,Returns the size of a variable in byte,Returns the size of a variable in array,Returns the size of a class,B
+7,7,Which of the following is used to terminate a statement in C++?,.,;,:,",",B
+8,8,What does std::vector represent in C++?,Fixed-size array,Dynamic array,Linked list,Binary tree,B
+9,9,int main() { int a = 10; std::cout << ++a; } OUTPUT?,10,11,9,0,B
+10,10,Which keyword is used to inherit a class in C++?,extends,inherit,public,implements,C
+11,11,What is the main difference between 'struct' and 'class' in C++?,No difference,"struct' is public by default, 'class' is private by default",class' cannot contain member functions,struct' cannot have constructors,B
+12,12,Which of the following is a correct statement about namespaces in C++?,They prevent name conflicts,They are used to organize code,) Multiple namespaces can be used in a single file,All of the above,D
+13,13,Which of the following is true about destructors in C++?,Destructors cannot be overloaded,Destructors are called when an object is destroyed,Destructors have the same name as the class with a ~ symbol,All of the above,D
+14,14,Which of the following is not a type of constructor in C++?,Default constructor,Copy constructor,Move constructor,Virtual constructor,D
+15,15,Which of the following is the correct syntax for declaring a function pointer in C++?,int (*ptr)();,int ptr();,int *ptr;,int **ptr();,A
+16,16,What is a pure virtual function in C++?,A function with no implementation,A function defined in a class but not implemented,A function that must be overridden in derived class,All of the above,D
+17,17,How are objects created in C++?,Using a constructor,Using a function,Using a class,Using a structure,C
+18,18,Which header file is required for using input/output streams in C++?,stdio.h,stdlib.h,iostream,fstream,C
+19,19,What is the default return type of main() function in C++?,) int,Void,char,float,A
+20,20,Which data type is used to store true/false values in C++?,Int,bool,char,float,B
+21,21,Which of the following can be overloaded in C++?,Functions,Operators,Constructors,All of the above,D
+22,22,What is the function of the 'new' operator in C++?,Deallocates memory,Allocates memory,Initializes variables,Deletes objects,B
+23,23,What does STL stand for in C++?,Standard Template Library,Sequential Template Library,Standard Type Library,System Template Library,A
+24,24,Which of the following is a feature of polymorphism in C++?,Function overloading,Operator overloading,Virtual functions,ALL,D
+25,25,int main() { int a = 10; int &ref = a; ref++; std::cout << a; },10,11,Garbage value,NONE,B
+26,26,Which C++ keyword is used to handle exceptions?,throw,Try,Catch,All of the above,D
+27,27,int *ptr;What does the following code snippet declare?,Pointer to integer,Reference to integer,Pointer to character,) Integer variable**,A
+28,28,class B {}; class D : public B {};,Single Inheritance,Multiple Inheritance,Multilevel Inheritance,Hybrid Inheritance**,A
+29,29,What is the default access specifier for class members in C++?,Public,Private,Protected,none,B
+30,30,Which of the following is a feature of object-oriented programming in C++?,Procedural Programming,Polymorphism,Low-level operations,Fast execution,B
+31,31,Which of the following is a correct class definition in C++?,class ClassName {};,class ClassName [] {};,class {} ClassName;,class() ClassName {};,A
+32,32,int main() { int x = 10 / 0; } OUTPUT?,Compile-time error,Run-time error,Infinite loop,None of the above**,B
+33,33,Which of the following is not a valid C++ variable name?,intNumber,float-value,totalValue,num123,B
+34,34,Which of the following is used to dynamically allocate memory in C++?,malloc(),calloc(),new,free(),C
+35,35,"int a = 10, b = 20; std::cout << a++ + ++b; OUTPUT?",31,32,33,34,A
+36,36,Which of the following correctly declares a reference variable in C++?,int &ref = var;,int ref = &var;,int ref = *var;,int *ref = &var;,A
+37,37,Which keyword is used to define a constant value in C++?,constant,final,const,static,C
+38,38,Which of the following is true about friend functions in C++?,They can access private and protected members of a class.,They can only access public members of a class,They must be declared inside the public section.,They must return a value.,A
+39,39,"int main() { char arr[] = ""Hello""; std::cout << sizeof(arr); }",6,5,2,ERROR,A
+40,40,Which of the following statements is correct about virtual functions in C++?,Virtual functions must be defined in the base class.,Virtual functions cannot be inherited.,Virtual functions are declared using the virtual keyword,Virtual functions cannot be overridden.,C
+41,41,What is the main advantage of using templates in C++?,Faster compilation,Code reusability,Secure code,Easier debugging,B
+42,42,What is the role of destructors in C++?,Initialize object members,Allocate memory for objects,Deallocate memory when the object is destroyed,Both a and b,C
+43,43,Which of the following is not a valid file operation in C++?,read(),write(),close(),link(),D
+44,44,Which of the following correctly opens a file in read mode in C++?,"fstream file(""data.txt"", ios::in);","fstream file(""data.txt"", ios::out);","ifstream file(""data.txt"", ios::in);","ifstream file(""data.txt"", ios::out);",C
+45,45,Which of the following is true for an abstract class in C++?,It can have both abstract and non-abstract methods.,It cannot have member variables.,It must have all virtual methods.,It cannot be inherited.,A
+46,46,Which of the following functions can be used to read a whole line from a file in C++?,cin,getline(),scanf(),read(),B
+47,47,"int a = 5, b = 3; cout << a + b; OUTPUT?",8,5,3,,A
+48,48,int x = 3; int y = 2; cout << (x > y ? x : y); OUTPUT?,3,2,1,NONE,A

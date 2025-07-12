@@ -1,0 +1,49 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #4b0082;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.sidebar {
+    background-color: #4b0082;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    width: 250px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 30px;
+}
+
+.btn-primary {
+    background-color: #4b0082;
+    border-color: #4b0082;
+}
+
+.card {
+    margin-bottom: 20px;
+}

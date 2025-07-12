@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user.username }}'s Profile - ITS</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/dashboard.css' %}"> <!-- Linking the external CSS file -->
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:700);
+
+        /* -- vars */
+        :root {
+            --bg-color: #34495e;
+            --default-size: 1em;
+            --label-font-size: calc(var(--default-size) / 4);
+            --label-font-size-redo: calc(var(--default-size) * 4);
+        }
+
+        /* -- selectors */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ecf0f1;
+            color: #444;
+            font-family: 'Lato', Tahoma, Geneva, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #34495e;
+        }
+        .navbar-brand,
+        .nav-link {
+            color: #ecf0f1 !important;
+        }
+        .navbar-brand:hover,
+        .nav-link:hover {
+            color: #ffffff !important;
+            text-decoration: underline;
+        }
+        .navbar-toggler {
+            border-color: #ecf0f1;
+        }
+        .m50{
+            margin-top: 50px;
+        }
+        .navbar-toggler-icon {
+            background-color: #ecf0f1;
+        }
+        .btn-primary {
+            background-color: #2980b9;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <i class="fas fa-brain"></i> ITS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'quiz' %}">Quizzes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'study' %}">Study Materials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                </li>
+                <li class="nav-item">
+                    {% if user.is_authenticated %}
+                    <form method="POST" action="{% url 'logout' %}" class="form-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </form>
+                    {% else %}
+                    <a href="{% url 'login' %}" class="nav-link">Login</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content  m-0 ">
+        <div class="d-flex justify-content-between mt-20">
+            <h2 class="display-4 m50 ">{{ user.username }}'s Profile</h2>
+        </div>
+        <hr>
+        
+        <h3>Profile Information</h3>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <strong>Rank:</strong>
+                {% if profile.rank == 0 %}
+                    Beginner
+                {% elif profile.rank == 1 %}
+                    Intermediate
+                {% elif profile.rank == 2 %}
+                    Advanced
+                {% else %}
+                    Not ranked
+                {% endif %}
+            </li>
+            <li class="list-group-item">
+                <strong>Quiz Count:</strong> {{ profile.quiz_count }}
+            </li>
+            <li class="list-group-item">
+                <strong>Badge:</strong>
+                {% if profile.badge == 0 and profile.quiz_count >= 1 %}
+                    Bronze
+                {% elif profile.badge == 1 %}
+                    Silver
+                {% elif profile.badge == 2 %}
+                    Gold
+                {% elif profile.quiz_count == 0 and profile.badge == 0 %}
+                    None
+                {% else %}
+                    No badge
+                {% endif %}
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

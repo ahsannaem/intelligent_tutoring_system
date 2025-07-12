@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITS - Quiz</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="quizpage.css">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><i class="fas fa-brain"></i> ITS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="studymaterial.html" class="nav-link">Course</a></li>
+                <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li class="nav-item"><a href="registration.html" class="nav-link">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Quiz Container -->
+    <div class="container">
+        <h2>Quiz: Basic Programming</h2>
+        <form>
+            <div class="question">
+                <h4>1. What is a variable in programming?</h4>
+                <div class="options">
+                    <label><input type="radio" name="q1"> A. A constant value</label>
+                    <label><input type="radio" name="q1"> B. A placeholder for storing values</label>
+                    <label><input type="radio" name="q1"> C. A programming language</label>
+                    <label><input type="radio" name="q1"> D. A type of data</label>
+                </div>
+            </div>
+            <!-- Repeat above structure for more questions -->
+            <button type="submit" class="btn btn-primary btn-block">Submit Quiz</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap and JavaScript links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="quizpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Tutoring System - Home</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static "style/quizpage.css" %}"> <!-- Linking the external CSS file -->
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="{% url 'index' %}"><i class="fas fa-brain"></i> ITS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+
+                    {% if user.is_authenticated %}
+                    <form method="POST" action= "{% url "logout" %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-dark">Logout</button>
+                    </form>
+                    {% else %}<a href="{% url "login" %}" class="nav-link">Login</a>{% endif %}
+                    </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="text-center">
+{% block content %}
+<h1>Quiz</h1>
+<div class="d-none">
+{% if form.errors %}
+    <div class="alert alert-danger">
+        Please correct the errors below:
+        <ul>
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+</div>
+
+<form method="post" action="{% url 'markquiz' %}" class="form-group">
+    {% csrf_token %}
+    {% for question in questions %}
+        <h2 class="">{{question.id}}</h2>
+        <h3 class="form-control px-50">{{ question.text }}</h3>
+        {% for option in question.get_options %}
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="answer_{{ question.id }}" id="answer_{{ question.id }}_{{ option.0 }}" value="{{ option.0 }}">
+                <label class="form-check-label" for="answer_{{ question.id }}_{{ option.0 }}">{{ option.1 }}</label>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    <button type="submit" class="btn btn-primary mb-6">Submit</button>
+</form>
+
+{% endblock %}
+
+</div>
+
+</body>
+
+</html>

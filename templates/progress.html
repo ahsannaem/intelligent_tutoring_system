@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITS - Progress</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="progress.css"> <!-- Linking external CSS file -->
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><i class="fas fa-brain"></i> ITS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="studymaterial.html" class="nav-link">Course</a></li>
+                <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li class="nav-item"><a href="registration.html" class="nav-link">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="sidebar">
+        <h3>Dashboard</h3>
+        <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Home</a>
+        <a href="quizpage.html"><i class="fas fa-question-circle"></i> Quizzes</a>
+        <a href="studymaterial.html"><i class="fas fa-book"></i> Study Materials</a>
+        <a href="{% url "dashboard" %}"><i class="fas fa-chart-line"></i> Progress</a>
+        <a href="setting.html"><i class="fas fa-cog"></i> Settings</a>
+    </div>
+
+    <div class="main-content">
+        <h2>Your Progress</h2>
+
+        <!-- Overall Progress -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Overall Course Progress</h4>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70% Complete</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Statistics -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Quiz Progress</h4>
+                        <p>Completed 5 out of 8 quizzes.</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 62%;" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100">62% Complete</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Study Material Progress</h4>
+                        <p>Reviewed 3 out of 5 study materials.</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60% Complete</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Achievements</h4>
+                <ul>
+                    <li class="achievement">Completed Basic Programming Course</li>
+                    <li class="achievement">Achieved Bronze Badge</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Upcoming Tasks -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Upcoming Tasks</h4>
+                <ul>
+                    <li>Complete the Advanced Programming Quiz</li>
+                    <li>Review Study Material on Data Structures</li>
+                    <li>Update Profile Information</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="progress.js"></script> <!-- Linking the external JavaScript file -->
+</body>
+</html>

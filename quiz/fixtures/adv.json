@@ -1,0 +1,303 @@
+[
+    {
+      "model": "quiz.adv",
+      "id": 1,
+      "fields": {
+        "text": "What is a template in C++?",
+        "option_A": "A tool for code optimization",
+        "option_B": "pre-defined library",
+        "option_C": "method for debugging code",
+        "option_D": "none",
+        "correct": "none"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 2,
+      "fields": {
+        "text": "Which of the following is a benefit of using templates?",
+        "option_A": "Code Duplication",
+        "option_B": "Type Safety",
+        "option_C": "Slower Compile Time",
+        "option_D": "Reduced Readability",
+        "correct": "Type Safety"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 3,
+      "fields": {
+        "text": "Which of the following can be a template parameter?",
+        "option_A": "A type",
+        "option_B": "A non-type value",
+        "option_C": "A template itself",
+        "option_D": "All of the above",
+        "correct": "All of the above"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 4,
+      "fields": {
+        "text": "Which of the following keywords is used to handle exceptions in C++?",
+        "option_A": "catch",
+        "option_B": "throw",
+        "option_C": "try",
+        "option_D": "All of the above",
+        "correct": "All of the above"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 5,
+      "fields": {
+        "text": "What happens if an exception is not caught?",
+        "option_A": "The program terminates",
+        "option_B": "program continues running",
+        "option_C": "exception is ignored",
+        "option_D": "exception is logged",
+        "correct": "The program terminates"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 6,
+      "fields": {
+        "text": "Which of the following is NOT a valid exception type in C++?",
+        "option_A": "std::exception",
+        "option_B": "std::runtime_error",
+        "option_C": "std::logic_error",
+        "option_D": "all are valid",
+        "correct": "all are valid"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 7,
+      "fields": {
+        "text": "Which mode is used to open a file for both reading and writing in C++?",
+        "option_A": "ios::in",
+        "option_B": "ios::out",
+        "option_C": "ios::ate",
+        "option_D": "ios::in | ios::out",
+        "correct": "ios::in | ios::out"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 8,
+      "fields": {
+        "text": "What will happen if you try to open a file that does not exist in read mode?",
+        "option_A": "program will create a new file",
+        "option_B": "exception will be thrown",
+        "option_C": "program will crash",
+        "option_D": "file stream will be in a fail state",
+        "correct": "file stream will be in a fail state"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 9,
+      "fields": {
+        "text": "Which function is used to close a file in C++?",
+        "option_A": "end()",
+        "option_B": "close()",
+        "option_C": "finish()",
+        "option_D": "stop()",
+        "correct": "close()"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 10,
+      "fields": {
+        "text": "In C++, which function is used to read a line from a file?",
+        "option_A": "readLine()",
+        "option_B": "getLine()",
+        "option_C": "getline()",
+        "option_D": "read()",
+        "correct": "getline()"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 11,
+      "fields": {
+        "text": "Which of the following is a standard library exception in C++?",
+        "option_A": "std::out_of_range",
+        "option_B": "std::unknown_error",
+        "option_C": "std::file_not_found",
+        "option_D": "std::invalid_pointer",
+        "correct": "std::out_of_range"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 12,
+      "fields": {
+        "text": "What does a template allow?",
+        "option_A": "Code duplication",
+        "option_B": "Generic programming",
+        "option_C": "Static typing",
+        "option_D": "Faster execution",
+        "correct": "Generic programming"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 13,
+      "fields": {
+        "text": "What symbol is used for template parameters?",
+        "option_A": "()",
+        "option_B": "<>",
+        "option_C": "{}",
+        "option_D": "[]",
+        "correct": "<>"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 14,
+      "fields": {
+        "text": "Can templates be specialized?",
+        "option_A": "Yes",
+        "option_B": "No",
+        "option_C": "only for classes",
+        "option_D": "only for functions",
+        "correct": "Yes"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 15,
+      "fields": {
+        "text": "What type of template is std::vector?",
+        "option_A": "Class template",
+        "option_B": "Function template",
+        "option_C": "Non-type template",
+        "option_D": "Namespace template",
+        "correct": "Class template"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 16,
+      "fields": {
+        "text": "What keyword starts a try block?",
+        "option_A": "catch",
+        "option_B": "throw",
+        "option_C": "try",
+        "option_D": "none",
+        "correct": "try"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 17,
+      "fields": {
+        "text": "Which keyword is used to throw an exception?",
+        "option_A": "catch",
+        "option_B": "throw",
+        "option_C": "try",
+        "option_D": "except",
+        "correct": "throw"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 18,
+      "fields": {
+        "text": "What does catch handle?",
+        "option_A": "Errors",
+        "option_B": "Exceptions",
+        "option_C": "Warnings",
+        "option_D": "Messages",
+        "correct": "Exceptions"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 19,
+      "fields": {
+        "text": "What does std::exception represent?",
+        "option_A": "A specific error",
+        "option_B": "A base class for exceptions",
+        "option_C": "A user-defined error",
+        "option_D": "A system error",
+        "correct": "A base class for exceptions"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 20,
+      "fields": {
+        "text": "What does ios::in do?",
+        "option_A": "Open for reading",
+        "option_B": "Open for writing",
+        "option_C": "Open for appending",
+        "option_D": "none",
+        "correct": "Open for reading"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 21,
+      "fields": {
+        "text": "Which function writes to a file?",
+        "option_A": "write()",
+        "option_B": "put()",
+        "option_C": "insert()",
+        "option_D": "append()",
+        "correct": "put()"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 22,
+      "fields": {
+        "text": "What is returned if a file fails to open?",
+        "option_A": "NULL",
+        "option_B": "0",
+        "option_C": "FALSE",
+        "option_D": "-1",
+        "correct": "FALSE"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 23,
+      "fields": {
+        "text": "Which mode is for reading binary files?",
+        "option_A": "ios::text",
+        "option_B": "ios::binary",
+        "option_C": "ios::read",
+        "option_D": "none",
+        "correct": "ios::binary"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 24,
+      "fields": {
+        "text": "What is the purpose of exception handling?",
+        "option_A": "To manage runtime errors",
+        "option_B": "To avoid compilation errors",
+        "option_C": "To improve performance",
+        "option_D": "To optimize memory usage",
+        "correct": "To manage runtime errors"
+      }
+    },
+    {
+      "model": "quiz.adv",
+      "id": 25,
+      "fields": {
+        "text": "What happens to the program flow after an exception is caught?",
+        "option_A": "Program terminates",
+        "option_B": "Control transfers to the catch block",
+        "option_C": "Control transfers to the finally block",
+        "option_D": "none",
+        "correct": "Control transfers to the catch block"
+      }
+    }
+  ]
+  

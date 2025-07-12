@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITS - Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" type="text/css" href="{% static "style/dashboard.css" %}"> <!-- Linking the external CSS file -->
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="{% url 'dashboard' %}"><i class="fas fa-brain"></i> ITS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    {% if user.is_authenticated %}
+                    <form method="POST" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form>
+                    {% else %}<a href="{% url 'login' %}" class="nav-link">Login</a>{% endif %}
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="sidebar">
+        <h3>Dashboard</h3>
+        <a href="{% url 'dashboard' %}"><i class="fas fa-tachometer-alt"></i> Home</a>
+        <a href="{% url 'quiz' %}"><i class="fas fa-question-circle"></i> Quizzes</a>
+        <a href="{% url 'study' %}"><i class="fas fa-book"></i> Study Materials</a>
+        <a href="{% url 'study' %}"><i class="fas fa-chart-line"></i> Progress</a>
+        <a href="{% url 'profile' %}"><i class="fas fa-cog"></i> Profile</a>
+    </div>
+
+    <div class="main-content">
+        <h2>Study Material</h2>
+        <br>
+        <h1>Video Content</h1>
+        <br>
+        <div class="row">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZzaPdXTrSb8?si=6IVcGa54dSc85ayQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
+
+    </div>
+
+    <!-- Bootstrap and JavaScript links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
